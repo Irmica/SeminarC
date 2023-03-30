@@ -55,12 +55,14 @@
 // Задача 23. Напишите программу, которая принимает на вход число (N) и 
 // выдаёт таблицу кубов чисел от 1 до N.
 
-void Cub (int n)
+void Cub(int n)
 {
     int index = 1;
     while (index <= n)
-    {Console.WriteLine($"{index} - {Math.Pow(index, 3)}");
-    index +=1;}
+    {
+        Console.WriteLine($"{index} - {Math.Pow(index, 3)}");
+        index += 1;
+    }
 }
 Console.WriteLine("Введите число N: ");
 int N = Convert.ToInt32(Console.ReadLine());
