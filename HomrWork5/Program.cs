@@ -36,8 +36,6 @@
 //-------------------------------------------------------------------------------------
 
 // Задача 36: Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.
-// [3, 7, 23, 12] -> 19
-// [-4, -6, 89, 6] -> 0
 
 // int[] CreateArray(int minValue, int maxValue, int size)
 // {
@@ -62,9 +60,9 @@
 //     return sum;
 // }
 
-// Console.Write("Введите минимальное число для генерации элементов массива: ");
+// Console.Write("Введите минимальное значение для генерации элементов массива: ");
 // int minValue = Convert.ToInt32(Console.ReadLine());
-// Console.Write("Введите максимально число для генерации элементов массива: ");
+// Console.Write("Введите максимально значение для генерации элементов массива: ");
 // int maxValue = Convert.ToInt32(Console.ReadLine());
 // Console.Write("Введите размер генерируемого массива: ");
 // int size = Convert.ToInt32(Console.ReadLine());
@@ -76,19 +74,48 @@
 
 //-----------------------------------------------------------------------------------------------------
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
 // [3 7 22 2 78] -> 76
+
+double[] CreateArrayDoubleDigits(int minValue, int maxValue, int size)
+{
+    double[] array = new double[size];
+    for (int i = 0; i < size; i++)
+    {
+       array[i] = Math.Round((new Random().NextDouble() + new Random().Next(minValue, maxValue)), 2);
+     }
+    return array;
+}
+
+void ShowArray(double[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+        Console.Write(array[i] + " ");
+    Console.WriteLine();
+}
+
+double Difference(double[] doubleArray)
+{
+    double imax = doubleArray[0];
+    double imin = doubleArray[0];
+    for (int i = 1; i < doubleArray.Length; i++)
+    {
+        if (doubleArray[i] > imax)
+            imax = doubleArray[i];
+        if (doubleArray[i] < imin)
+            imin = doubleArray[i];
+    }
+return imax-imin;
+}
+
+Console.Write("Введите минимальное значение для генерации элементов массива: ");
+int minValue = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите максимально значение для генерации элементов массива: ");
+int maxValue = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите размер генерируемого массива: ");
+int size = Convert.ToInt32(Console.ReadLine());
+
+double[] dArray = CreateArrayDoubleDigits(minValue, maxValue, size);
+Console.Write("Сгенерированный массив: ");
+ShowArray(dArray);
+Console.Write($"Разница между максимальным и минимальным значение элементов составляет {Math.Round(Difference(dArray), 2)}");
