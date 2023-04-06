@@ -396,3 +396,11 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+HomrWork5/obj/Debug/net6.0/HomrWork5.assets.cache
+Seminar4/bin/Debug/net6.0/Seminar4.dll
+
+
+.gitignore
+Seminar4/bin/Debug/net6.0/Seminar4.dll
+Seminar4/bin/Debug/net6.0/Seminar4.dll
+Seminar4/obj/Debug/net6.0/Seminar4.pdb
