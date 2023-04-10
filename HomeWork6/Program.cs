@@ -30,6 +30,7 @@ Console.Write("Введите k1: ");
 double k1 = Convert.ToDouble(Console.ReadLine());
 Console.Write("Введите b1: ");
 double b1 = Convert.ToDouble(Console.ReadLine());
+
 Console.Write("Введите k2: ");
 double k2 = Convert.ToDouble(Console.ReadLine());
 Console.Write("Введите b2: ");
