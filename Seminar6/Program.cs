@@ -79,6 +79,7 @@ string ConvertToByte(int n)
         s = n % 2 + s;
         n = n / 2;
     }
+    s = n + s;
     return s;
 }
 Console.Write("Введите n: ");
