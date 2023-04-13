@@ -18,7 +18,7 @@ Console.WriteLine();
 int GetNegativeNumbers(int[] array)
 {
     int sum = 0;
-    for (i = 0; i < array.Length; i += 1)
+    for (int i = 0; i < array.Length; i += 1)
     {
         if (array[i] < 0)
             sum += array[i];
